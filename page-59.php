@@ -35,6 +35,7 @@
                         }
                     }
                 }
+                echo $coming;
             ?>
 
             <h1 class="entry-title">
