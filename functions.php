@@ -71,4 +71,17 @@ function blankslate_comments_number( $count )
 function my_home_category( $query ) {
    
 }
+
+/**
+*
+* Purpose:      Returns an array 
+* Description:
+*
+*
+*/
+function get_recent_shows() {
+
+}
+
+
 add_action( 'pre_get_posts', 'my_home_category' );
