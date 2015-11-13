@@ -43,7 +43,7 @@
                     var audio;
                     $('#listen').click(function() {
                         if (!audio || audio && audio.paused) {
-                            audio = new Audio('//ksdt.ucsd.edu:8000/stream');
+                            audio = new Audio('http://ksdt.ucsd.edu:8000/stream');
                             $(this).text('loading...');
                             audio.addEventListener('canplay', function() { audio.play(); $('#listen').text('click to pause'); });
                             audio.addEventListener('playing', function() { $('#listen').text('click to pause'); });
