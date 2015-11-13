@@ -32,10 +32,10 @@
                     foreach ($shows as $show) {
                         if (substr($show['OnairTime'], 0, 2) == $h % 24) {
                             $coming[] = $show;
+			    echo $show;
                         }
                     }
                 }
-                echo $coming;
             ?>
 
             <h1 class="entry-title">
@@ -47,6 +47,7 @@
                 <div class="artist_box"><div class="overlay"></div><span class="dj_title">Test</span></div>
                 <div class="artist_box"><div class="overlay"></div><span class="dj_title">Test</span></div>
             </div>
+	    <?php get_recent_shows("02-13-15 02:00AM.mp3"); ?>
 
             </article>
             <?php if ( ! post_password_required() ) comments_template( '', true ); ?>

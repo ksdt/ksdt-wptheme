@@ -15,10 +15,9 @@ add_action( 'wp_enqueue_scripts', 'blankslate_load_scripts' );
 function blankslate_load_scripts()
 {
     wp_enqueue_script( 'jquery' );
-    wp_enqueue_script( 'slick', '//cdn.jsdelivr.net/jquery.slick/1.3.15/slick.min.js', array('jquery'));
-    wp_enqueue_style( 'slick', '//cdn.jsdelivr.net/jquery.slick/1.3.15/slick.css' , array('jquery'));
     wp_enqueue_script(' spinitron', '//spinitron.com/js/npwidget.js', '', '1.0', true );
     wp_enqueue_script( 'ksdt', get_template_directory_uri() . '/js/js.js', array('jquery'));
+    wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css' );
 }
 add_action( 'comment_form_before', 'blankslate_enqueue_comment_reply_script' );
 function blankslate_enqueue_comment_reply_script()
@@ -68,20 +67,36 @@ function blankslate_comments_number( $count )
         return $count;
     }
 }
+/*
+
+this was breaking some pages so i commented it out
+
+
 function my_home_category( $query ) {
+
+/*
+*  Name: 	get_show_name
+*  Purpose:	takes in the name of an mp3 file from the past_shows directory and returns a string that
+*		has the name of the show and the date
+*  Description:	TODO
+*  Parameter:	filename of mp3 in format:
+*		MM-DD-YY HH:MMPM.mp3
+*  Output:	String that is name of the show + date in TODO format
+*
+function get_show_name ($file_name) {
+  $month = substr( $file_name, 0, 2);
+  echo month;
+}
    
-}
-
-/**
-*
-* Purpose:      Returns an array 
-* Description:
-*
-*
-*/
-function get_recent_shows() {
-
-}
+}*/
+//add_action( 'pre_get_posts', 'my_home_category' );
 
 
-add_action( 'pre_get_posts', 'my_home_category' );
+
+
+
+
+
+
+
+
