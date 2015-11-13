@@ -7,7 +7,7 @@
             </header>
             <section class="entry-content">
                 <?php the_content(); ?>
-                <iframe id="charts" src='http://spinitron.com/radio/playlist.php?station=ksdt&browse=a&ptype=d&css=true'></iframe>
+                <iframe id="charts" src='//spinitron.com/radio/playlist.php?station=ksdt&browse=a&ptype=d&css=true'></iframe>
             </section>
         </article>
         <?php if ( ! post_password_required() ) comments_template( '', true ); ?>

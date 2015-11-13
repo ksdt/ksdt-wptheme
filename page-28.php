@@ -6,7 +6,7 @@
                 <h1 class="entry-title"><?php the_title(); ?></h1>
             </header>
             <section class="entry-content">
-                <iframe id="shows" src='http://spinitron.com/radio/playlist.php?station=ksdt&show=schedule&ptype=d&css=true'></iframe>
+                <iframe id="shows" src='//spinitron.com/radio/playlist.php?station=ksdt&show=schedule&ptype=d&css=true'></iframe>
             </section>
         </article>
         <?php if ( ! post_password_required() ) comments_template( '', true ); ?>
