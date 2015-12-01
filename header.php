@@ -41,9 +41,18 @@
             <script>
                 $(document).ready(function() {
                     var audio;
+                    var title;
+
+                    function generateTitle() {
+                        if (!audio) {
+                            if (title) {
+                             
+                        }
+                    }
+
                     $('#listen').click(function() {
                         if (!audio || audio && audio.paused) {
-                            audio = new Audio('http://ksdt.ucsd.edu:8000/stream');
+                            audio = new Audio('//ksdt.ucsd.edu/listen/stream');
                             $(this).text('loading...');
                             audio.addEventListener('canplay', function() { audio.play(); $('#listen').text('click to pause'); });
                             audio.addEventListener('playing', function() { $('#listen').text('click to pause'); });
@@ -52,6 +61,12 @@
                             audio.pause();
                         }
                     });
+                    (function updateSong() {
+                        $.get('https://ksdt.ucsd.edu/status', function (data) { 
+                            var title = data.icestats.source.title;
+                        });
+                        setTimeout(updateSong, 1000);
+                    })();
                 });
                 </script>
         </header>
